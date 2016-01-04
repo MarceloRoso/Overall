@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navigationModel
+  ns = "http://schemas.android.com?import=com.android.tools.idea.editors.navigation.model.*">
+  <locations  
+    class = "java.util.ArrayList">
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "a.buitress.overall.iniciosesion"/>
+      <point      
+        x = "2876"      
+        y = "-68"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.MenuState"      
+        className = "a.buitress.overall.iniciosesion"/>
+      <point      
+        x = "5000"      
+        y = "3936"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "a.buitress.overall.pantallamapa"/>
+      <point      
+        x = "3651"      
+        y = "2853"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "a.buitress.overall.uno"/>
+      <point      
+        x = "4656"      
+        y = "673"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.MenuState"      
+        className = "a.buitress.overall.uno"/>
+      <point      
+        x = "7737"      
+        y = "1027"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "a.buitress.overall.dos"/>
+      <point      
+        x = "1460"      
+        y = "718"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "a.buitress.overall.registro"/>
+      <point      
+        x = "2396"      
+        y = "4838"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.MenuState"      
+        className = "a.buitress.overall.dos"/>
+      <point      
+        x = "6333"      
+        y = "1814"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.MenuState"      
+        className = "a.buitress.overall.registro"/>
+      <point      
+        x = "6356"      
+        y = "5500"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "a.buitress.overall.marce"/>
+      <point      
+        x = "1358"      
+        y = "3720"/>
+    </statePointEntry>
+  </locations>
+</navigationModel>

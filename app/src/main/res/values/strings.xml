@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Overall</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_dos">Overall</string>
+    <string name="title_activity_registro">Overall</string>
+    <string name="title_activity_iniciosesion">Overall</string>
+    <string name="title_activity_marce">Overall</string>
+    <string name="title_activity_pantallamapa">Overall</string>
+    <string name="title_activity_nextlogin">Overall</string>
+</resources>
