@@ -3,6 +3,7 @@ package a.buitress.overall;
 import android.location.Location;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -32,9 +33,9 @@ public class pantallamapa extends FragmentActivity implements OnMapReadyCallback
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantallamapa);
-        getMap();
         setupLocationRequest();
         buildGoogleApiClient();
+        getMap();
     }
 
     private void setupLocationRequest() {
@@ -79,20 +80,6 @@ public class pantallamapa extends FragmentActivity implements OnMapReadyCallback
     }
 
     @Override
-    public void onResume() {
-        super.onResume();
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        LocationServices.FusedLocationApi.removeLocationUpdates(_googleApiClient, this);
-        if (_googleApiClient.isConnected()) {
-            _googleApiClient.disconnect();
-        }
-    }
-
-    @Override
     public void onConnectionSuspended(int i) {
 
     }
@@ -104,11 +91,13 @@ public class pantallamapa extends FragmentActivity implements OnMapReadyCallback
 
     @Override
     public void onLocationChanged(Location location) {
+        String locationLog = "Location Updated " + location.getAccuracy();
+        Log.d("pantallamapa", locationLog);
         if(location.hasAccuracy()) {
-            if(location.getAccuracy() < 10.0) {
-                moveCamera(new LatLng(location.getLatitude(), location.getLongitude()), 10);
-                _map.addMarker(new MarkerOptions().title("Posicion actual").draggable(true));
-                toastMessage("Accuracy: " + location.getAccuracy());
+            if(location.getAccuracy() < 30.0) {
+                moveCamera(new LatLng(location.getLatitude(), location.getLongitude()), 15);
+                _map.addMarker(new MarkerOptions().position(new LatLng(location.getLatitude(), location.getLongitude())).title("Posicion actual").draggable(true));
+                LocationServices.FusedLocationApi.removeLocationUpdates(_googleApiClient, this);
                 _googleApiClient.disconnect();
             }
         }
